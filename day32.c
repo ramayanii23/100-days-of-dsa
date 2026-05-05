@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int stack[n];
+    int top=-1;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        scanf("%d",&x);
+        top++;
+        stack[top]=x;
+    }
+    int m;
+    scanf("%d",&m);
+    for(int i=0;i<m;i++)
+    {
+        if(top!=-1)
+        {
+            top--;
+        }
+    }
+    for(int i=top;i>=0;i--)
+    {
+        printf("%d",stack[i]);
+        if(i>0)
+        {
+            printf(" ");
+        }
+    }
+    return 0;
+}
